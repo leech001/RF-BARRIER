@@ -9,8 +9,8 @@
 #define INC_RF_BARRIER_TIMINGS_H_
 
 // =============Receive========
-// Keeloq
-RF_t keeloq = {
+// HCS301
+RF_t hcs301 = {
 		.Invert=			1,
 		.Te = 				400,
 		.TeDrv = 			50,
@@ -44,7 +44,7 @@ RF_t nice12 = {
 
 
 // ========== Transmit ===========
-Protocol_t proto_keeloq ={
+Protocol_t proto_hcs301 ={
 		.nRepeatTransmit =		1,		// Repeat code
 		.PulseLength = 			400,
 		.CodeLength = 			66,

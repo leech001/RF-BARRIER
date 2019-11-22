@@ -1,7 +1,7 @@
-# STM32 HAL library for reading and sending code for radio frequency (RF) barrier (Came, Nice) simple code 12, 24 bit and Keeloq 66 bit.
+# STM32 HAL library for reading and sending code for radio frequency (RF) barrier (Came, Nice) simple code 12, 24 bit and HCS301 with keeloq 66 bit.
 
 ## English note
-A simple C library (STM32 HAL) for reading and sending code for radio frequency (RF) barrier (Came, Nice) simple code 12, 24 bit and Keeloq 66 bit.
+A simple C library (STM32 HAL) for reading and sending code for radio frequency (RF) barrier (Came, Nice) simple code 12, 24 bit and HCS301 with keeloq 66 bit.
 This lib Gate use for control automation garage door and road barriers. Something similar to the rc-switch project https://github.com/sui77/rc-switch.
 
 Config you RXPORT and PIN with GPIO_EXTI:
@@ -49,10 +49,10 @@ DWT_Init();
 / * USER CODE END 2 * /
 ```
 On this project setup is ready.
-After starting the program, information (code and etc.) will be available through the keeloq, came12, came24 structure
+After starting the program, information (code and etc.) will be available through the hcs301, came12, came24 structure
 ```
 ...
-keeloq.SerialNum
+hcs301.SerialNum
 came12.SerialNum
 ...
 ```
@@ -69,13 +69,13 @@ RF_send(&proto_came12, 1234);
 If RF_DUBUG is define on rf-barrier.h file, you can watch on USB serial port radio frequency (RF) diagram
 ```
 Came 12		____________________________________-_--_--_--_--_--_--_--_--_--_--_--_--
-Keeloq		-_-_-_-_-_-_-_-_-_-_-_-__________--_--_--_--_--_--_--_--_--_--_--_--_--_...
+HCS301		-_-_-_-_-_-_-_-_-_-_-_-__________--_--_--_--_--_--_--_--_--_--_--_--_--_...
 ...
 ```
 P.S. Came and Nice code algorithm from http://phreakerclub.com/forum/showthread.php?t=126
 
 ## Russian note
-Простая библиотека на Си (STM32 HAL) для считывания и отправки кодов  от пультов (ворота, шлагбаумы и др.) как с обычной кодировкой Came, Nice 12 и 24 бит. так и кодировкой Keeloq (пример https://ironlogic.ru/il_new.nsf/htm/ru_il100).
+Простая библиотека на Си (STM32 HAL) для считывания и отправки кодов  от пультов (ворота, шлагбаумы и др.) как с обычной кодировкой Came, Nice 12 и 24 бит. так и кодировкой HCS301 с keeloq (пример https://ironlogic.ru/il_new.nsf/htm/ru_il100).
 Чем то похожа на проект rc-switch https://github.com/sui77/rc-switch
 
 Сконфигурируйте ваш порт и пин куда подключен модуль для приема кодов как порт с внешним прерыванием (GPIO_EXTI):
@@ -123,10 +123,10 @@ DWT_Init();
 /* USER CODE END 2 */
 ```
 На этом настройка проекта закончена.
-После запуска программы информация о кодах и тд. от пультов поступающих при нажатии кнопок будет доступна через структуры keeloq, came12, came24.
+После запуска программы информация о кодах и тд. от пультов поступающих при нажатии кнопок будет доступна через структуры hcs301, came12, came24.
 ```
 ...
-keeloq.SerialNum
+hcs301.SerialNum
 came12.SerialNum
 ...
 ```
@@ -144,7 +144,7 @@ RF_send(&proto_came12, 1234);
 Ничего умнее для визуализации сигнала придумать не смог :)
 ```
 Came 12		____________________________________-_--_--_--_--_--_--_--_--_--_--_--_--
-Keeloq		-_-_-_-_-_-_-_-_-_-_-_-__________--_--_--_--_--_--_--_--_--_--_--_--_--_...
+HCS301		-_-_-_-_-_-_-_-_-_-_-_-__________--_--_--_--_--_--_--_--_--_--_--_--_--_...
 ...
 ```
 P.S. Алгоритмы кодировок взяты вот от сюда http://phreakerclub.com/forum/showthread.php?t=126

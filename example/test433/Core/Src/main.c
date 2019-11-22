@@ -128,11 +128,11 @@ int main(void)
 	RF_send(&proto_came24, 3);
 	RF_send(&proto_came24, 16777215);
 
-	RF_send(&proto_keeloq, 0);
-	RF_send(&proto_keeloq, 1);
-	RF_send(&proto_keeloq, 2);
-	RF_send(&proto_keeloq, 3);
-	RF_send(&proto_keeloq, 18446744073709551615);
+	RF_send(&proto_hcs301, 0);
+	RF_send(&proto_hcs301, 1);
+	RF_send(&proto_hcs301, 2);
+	RF_send(&proto_hcs301, 3);
+	RF_send(&proto_hcs301, 18446744073709551615);
 
 	HAL_Delay(10000);
 

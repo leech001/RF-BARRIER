@@ -70,11 +70,11 @@ typedef struct {
 	uint32_t 	Encrypt;
 } RF_t;
 
-Protocol_t proto_keeloq;
+Protocol_t proto_hcs301;
 Protocol_t proto_came12;
 Protocol_t proto_came24;
 
-RF_t keeloq;
+RF_t hcs301;
 RF_t came12;
 RF_t nice12;
 

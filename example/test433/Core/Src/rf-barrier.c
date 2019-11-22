@@ -181,7 +181,7 @@ void RX433_Int(void){
 
 	RF_Int(&came12);
 	RF_Int(&nice12);
-	RF_Int(&keeloq);
+	RF_Int(&hcs301);
 
 }
 
@@ -226,7 +226,7 @@ uint8_t RF_Int(RF_t* data){
 				data->BitArray[65 - data->BitCounter] = (pulse_duration >  data->Te * 3 / 2) ? 0 : 1;
 				data->BitCounter++;
 				if(data->BitCounter == data->CodeLengh){
-					// Keeloq
+					// hсs301
 					if(data->CodeLengh == 66){
 						data->Repeat = data->BitArray[0];
 						data->BatteryLow = data->BitArray[1];
